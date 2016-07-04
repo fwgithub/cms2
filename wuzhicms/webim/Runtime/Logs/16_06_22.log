@@ -1,0 +1,955 @@
+[ 2016-06-22T08:45:07+08:00 ] 0.0.0.0 /Webim/Index/online
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.009000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.009000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.120007s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.047003s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.058003s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.051003s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.020001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.055003s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.090005s ]
+SQL: SELECT * FROM `webim_visitors` WHERE ( name ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `webim_visitors` (`name`,`ipaddr`,`url`,`referer`,`location`,`created`) VALUES ('vid:b4c2feb','::1','/Webim/Index/online','http://localhost/Webim/index.php?uid=1','N/A','2016-06-22 08:45:07') [ RunTime:0.002000s ]
+ERR: 1062:Duplicate entry 'vid:b4c2feb' for key 'webim_visitor_name'
+ [ SQL语句 ] : INSERT INTO `webim_visitors` (`name`,`ipaddr`,`url`,`referer`,`location`,`created`) VALUES ('vid:b4c2feb','::1','/Webim/Index/online','http://localhost/Webim/index.php?uid=1','N/A','2016-06-22 08:45:07')
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `to`='vid:b4c2feb' and send != 1 ) ORDER BY timestamp DESC  LIMIT 0,50   [ RunTime:0.021001s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 20 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 20 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Webim\Lib\Action\IndexAction.class.php 第 242 行.
+SQL: SELECT * FROM `webim_members` WHERE ( uid = 'vid:b4c2feb' )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 22 行.
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='5' AND `from`='vid:b4c2feb' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='5' AND `to`='vid:b4c2feb' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.002000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+SQL: UPDATE `webim_histories` SET `send`=1 WHERE ( `to`='vid:b4c2feb' and send=0 ) [ RunTime:0.009000s ]
+
+[ 2016-06-22T08:45:09+08:00 ] 0.0.0.0 /Webim/Index/notifications?_=1466556305272
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005001s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.008001s ]
+SQL: SELECT * FROM `webim_visitors` WHERE ( name ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `webim_visitors` (`name`,`ipaddr`,`url`,`referer`,`location`,`created`) VALUES ('vid:b4c2feb','::1','/Webim/Index/notifications?_=1466556305272','http://localhost/Webim/index.php?uid=1','N/A','2016-06-22 08:45:09') [ RunTime:0.001000s ]
+ERR: 1062:Duplicate entry 'vid:b4c2feb' for key 'webim_visitor_name'
+ [ SQL语句 ] : INSERT INTO `webim_visitors` (`name`,`ipaddr`,`url`,`referer`,`location`,`created`) VALUES ('vid:b4c2feb','::1','/Webim/Index/notifications?_=1466556305272','http://localhost/Webim/index.php?uid=1','N/A','2016-06-22 08:45:09')
+NOTIC: 建议使用I方法替代_param
+
+[ 2016-06-22T08:45:12+08:00 ] 0.0.0.0 /Webim/Index/history?_=1466556307655&type=chat&id=5&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.006001s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.016001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `webim_visitors` WHERE ( name ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `webim_visitors` (`name`,`ipaddr`,`url`,`referer`,`location`,`created`) VALUES ('vid:b4c2feb','::1','/Webim/Index/history?_=1466556307655&type=chat&id=5&csrf_token=','http://localhost/Webim/index.php?uid=1','N/A','2016-06-22 08:45:12') [ RunTime:0.001000s ]
+ERR: 1062:Duplicate entry 'vid:b4c2feb' for key 'webim_visitor_name'
+ [ SQL语句 ] : INSERT INTO `webim_visitors` (`name`,`ipaddr`,`url`,`referer`,`location`,`created`) VALUES ('vid:b4c2feb','::1','/Webim/Index/history?_=1466556307655&type=chat&id=5&csrf_token=','http://localhost/Webim/index.php?uid=1','N/A','2016-06-22 08:45:12')
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='5' AND `from`='vid:b4c2feb' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='5' AND `to`='vid:b4c2feb' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.002000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+
+[ 2016-06-22T08:45:41+08:00 ] 0.0.0.0 /Webim/Index/history?_=1466556338634&type=chat&id=3&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `webim_visitors` WHERE ( name ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `webim_visitors` (`name`,`ipaddr`,`url`,`referer`,`location`,`created`) VALUES ('vid:b4c2feb','::1','/Webim/Index/history?_=1466556338634&type=chat&id=3&csrf_token=','http://localhost/Webim/index.php?uid=1','N/A','2016-06-22 08:45:40') [ RunTime:0.001000s ]
+ERR: 1062:Duplicate entry 'vid:b4c2feb' for key 'webim_visitor_name'
+ [ SQL语句 ] : INSERT INTO `webim_visitors` (`name`,`ipaddr`,`url`,`referer`,`location`,`created`) VALUES ('vid:b4c2feb','::1','/Webim/Index/history?_=1466556338634&type=chat&id=3&csrf_token=','http://localhost/Webim/index.php?uid=1','N/A','2016-06-22 08:45:40')
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='3' AND `from`='vid:b4c2feb' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='3' AND `to`='vid:b4c2feb' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.000000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+
+[ 2016-06-22T13:15:38+08:00 ] 0.0.0.0 /Webim/index.php?uid=1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.020001s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.020001s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.007001s ]
+SQL: SELECT * FROM `webim_visitors` WHERE ( name ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `webim_visitors` (`name`,`ipaddr`,`url`,`referer`,`location`,`created`) VALUES ('vid:b4c2feb','::1','/Webim/index.php?uid=1','','N/A','2016-06-22 13:15:38') [ RunTime:0.001000s ]
+ERR: 1062:Duplicate entry 'vid:b4c2feb' for key 'webim_visitor_name'
+ [ SQL语句 ] : INSERT INTO `webim_visitors` (`name`,`ipaddr`,`url`,`referer`,`location`,`created`) VALUES ('vid:b4c2feb','::1','/Webim/index.php?uid=1','','N/A','2016-06-22 13:15:38')
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-22T13:15:38+08:00 ] 0.0.0.0 /Webim/Index/boot
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005001s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005001s ]
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_settings` WHERE ( uid='1' ) LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2016-06-22T13:15:39+08:00 ] 0.0.0.0 /Webim/Index/online
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.008000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.006001s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `to`='1' and send != 1 ) ORDER BY timestamp DESC  LIMIT 0,50   [ RunTime:0.071004s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 20 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 20 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Webim\Lib\Action\IndexAction.class.php 第 242 行.
+SQL: SELECT * FROM `webim_members` WHERE ( uid = '1' )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 22 行.
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='5' AND `from`='1' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='5' AND `to`='1' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.002000s ]
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='3' AND `from`='1' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='3' AND `to`='1' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.001000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+SQL: UPDATE `webim_histories` SET `send`=1 WHERE ( `to`='1' and send=0 ) [ RunTime:0.001000s ]
+
+[ 2016-06-22T13:15:39+08:00 ] 0.0.0.0 /Webim/Index/history?_=1466572539303&type=chat&id=3&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005001s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='3' AND `from`='1' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='3' AND `to`='1' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.001000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+
+[ 2016-06-22T13:15:40+08:00 ] 0.0.0.0 /Webim/Index/notifications?_=1466572540730
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005001s ]
+NOTIC: 建议使用I方法替代_param
+
+[ 2016-06-22T13:15:41+08:00 ] 0.0.0.0 /Webim/Index/history?_=1466572541176&type=chat&id=2&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.006000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005000s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='2' AND `from`='1' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='2' AND `to`='1' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.001000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+
+[ 2016-06-22T13:16:29+08:00 ] 0.0.0.0 /Webim/index.php?uid=2
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005001s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `webim_visitors` WHERE ( name ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `webim_visitors` (`name`,`ipaddr`,`url`,`referer`,`location`,`created`) VALUES ('vid:93de01c','::1','/Webim/index.php?uid=2','','N/A','2016-06-22 13:16:28') [ RunTime:0.001000s ]
+ERR: 1062:Duplicate entry 'vid:93de01c' for key 'webim_visitor_name'
+ [ SQL语句 ] : INSERT INTO `webim_visitors` (`name`,`ipaddr`,`url`,`referer`,`location`,`created`) VALUES ('vid:93de01c','::1','/Webim/index.php?uid=2','','N/A','2016-06-22 13:16:28')
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-22T13:16:29+08:00 ] 0.0.0.0 /Webim/Index/boot
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005000s ]
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_settings` WHERE ( uid='2' ) LIMIT 1   [ RunTime:0.001001s ]
+
+[ 2016-06-22T13:16:30+08:00 ] 0.0.0.0 /Webim/Index/online
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005001s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `to`='2' and send != 1 ) ORDER BY timestamp DESC  LIMIT 0,50   [ RunTime:0.001000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 20 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 20 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Webim\Lib\Action\IndexAction.class.php 第 242 行.
+SQL: SELECT * FROM `webim_members` WHERE ( uid = '2' )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 22 行.
+SQL: UPDATE `webim_histories` SET `send`=1 WHERE ( `to`='2' and send=0 ) [ RunTime:0.001000s ]
+
+[ 2016-06-22T13:16:30+08:00 ] 0.0.0.0 /Webim/index.php?uid=2
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.006000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005001s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001001s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-22T13:16:31+08:00 ] 0.0.0.0 /Webim/Index/notifications?_=1466572591296
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002001s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.007000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005001s ]
+NOTIC: 建议使用I方法替代_param
+
+[ 2016-06-22T13:16:44+08:00 ] 0.0.0.0 /Webim/Index/history?_=1466572604625&type=chat&id=1&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005000s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='1' AND `from`='2' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='1' AND `to`='2' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.000000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+
+[ 2016-06-22T13:16:44+08:00 ] 0.0.0.0 /Webim/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.006000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005000s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-22T13:16:59+08:00 ] 0.0.0.0 /Webim/Index/chatbox?uid=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005000s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+
+[ 2016-06-22T13:17:01+08:00 ] 0.0.0.0 /Webim///Index/online
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.006001s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005001s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `to`='2' and send != 1 ) ORDER BY timestamp DESC  LIMIT 0,50   [ RunTime:0.001000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 20 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 20 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Webim\Lib\Action\IndexAction.class.php 第 242 行.
+SQL: SELECT * FROM `webim_members` WHERE ( uid = '2' )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 22 行.
+SQL: UPDATE `webim_histories` SET `send`=1 WHERE ( `to`='2' and send=0 ) [ RunTime:0.001000s ]
+
+[ 2016-06-22T13:17:04+08:00 ] 0.0.0.0 /Webim/Index/boot
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002001s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005000s ]
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_settings` WHERE ( uid='2' ) LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2016-06-22T13:17:05+08:00 ] 0.0.0.0 /Webim/Index/online
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.007001s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005000s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `to`='2' and send != 1 ) ORDER BY timestamp DESC  LIMIT 0,50   [ RunTime:0.000000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 20 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 20 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Webim\Lib\Action\IndexAction.class.php 第 242 行.
+SQL: SELECT * FROM `webim_members` WHERE ( uid = '2' )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 22 行.
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='1' AND `from`='2' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='1' AND `to`='2' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.001000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+SQL: UPDATE `webim_histories` SET `send`=1 WHERE ( `to`='2' and send=0 ) [ RunTime:0.001000s ]
+
+[ 2016-06-22T13:17:05+08:00 ] 0.0.0.0 /Webim/Index/history?_=1466572625107&type=chat&id=1&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.006001s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='1' AND `from`='2' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='1' AND `to`='2' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.001000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+
+[ 2016-06-22T13:17:06+08:00 ] 0.0.0.0 /Webim/Index/notifications?_=1466572626552
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005000s ]
+NOTIC: 建议使用I方法替代_param
+
+[ 2016-06-22T13:21:47+08:00 ] 0.0.0.0 /Webim/Index/history?_=1466572907786&type=chat&id=4&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.006000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.007000s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='4' AND `from`='1' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='4' AND `to`='1' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.001000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+
+[ 2016-06-22T13:21:51+08:00 ] 0.0.0.0 /Webim/Index/history?_=1466572911283&type=chat&id=6&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.006001s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='6' AND `from`='1' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='6' AND `to`='1' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.000000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+
+[ 2016-06-22T13:21:53+08:00 ] 0.0.0.0 /Webim/Index/setting
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005001s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005000s ]
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_settings` WHERE ( uid='1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `webim_settings` SET `uid`='1',`data`='{\"play_sound\":true,\"buddy_sticky\":true,\"minimize_layout\":true,\"msg_auto_pop\":true}',`created`='2016-06-21 10:45:47',`updated`=null WHERE ( `id` = 3 ) [ RunTime:0.011001s ]
+
+[ 2016-06-22T13:21:54+08:00 ] 0.0.0.0 /Webim/Index/setting
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.006000s ]
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_settings` WHERE ( uid='1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `webim_settings` SET `uid`='1',`data`='{\"play_sound\":true,\"buddy_sticky\":true,\"minimize_layout\":false,\"msg_auto_pop\":true}',`created`='2016-06-21 10:45:47',`updated`=null WHERE ( `id` = 3 ) [ RunTime:0.000000s ]
+
+[ 2016-06-22T13:21:56+08:00 ] 0.0.0.0 /Webim/Index/history?_=1466572916172&type=chat&id=7&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.006000s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='7' AND `from`='1' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='7' AND `to`='1' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.001000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+
+[ 2016-06-22T13:21:57+08:00 ] 0.0.0.0 /Webim/Index/history?_=1466572917572&type=chat&id=8&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005001s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.006000s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='8' AND `from`='1' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='8' AND `to`='1' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.001000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+
+[ 2016-06-22T13:21:58+08:00 ] 0.0.0.0 /Webim/Index/history?_=1466572918846&type=chat&id=9&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005001s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.007000s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='9' AND `from`='1' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='9' AND `to`='1' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.001000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+
+[ 2016-06-22T13:22:03+08:00 ] 0.0.0.0 /Webim/Index/history?_=1466572922958&type=chat&id=10&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002001s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.006000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005001s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='10' AND `from`='1' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='10' AND `to`='1' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.001000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+
+[ 2016-06-22T13:23:23+08:00 ] 0.0.0.0 /Webim/index.php?uid=test
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `webim_visitors` WHERE ( name ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `webim_visitors` (`name`,`ipaddr`,`url`,`referer`,`location`,`created`) VALUES ('vid:78b1ac9','::1','/Webim/index.php?uid=test','','N/A','2016-06-22 13:23:23') [ RunTime:0.001000s ]
+ERR: 1062:Duplicate entry 'vid:78b1ac9' for key 'webim_visitor_name'
+ [ SQL语句 ] : INSERT INTO `webim_visitors` (`name`,`ipaddr`,`url`,`referer`,`location`,`created`) VALUES ('vid:78b1ac9','::1','/Webim/index.php?uid=test','','N/A','2016-06-22 13:23:23')
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-22T13:23:23+08:00 ] 0.0.0.0 /Webim/Index/boot
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.006001s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005001s ]
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_settings` WHERE ( uid='test' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2016-06-22T13:23:24+08:00 ] 0.0.0.0 /Webim/Index/online
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.007000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.006000s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `to`='test' and send != 1 ) ORDER BY timestamp DESC  LIMIT 0,50   [ RunTime:0.000000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 20 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 20 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Webim\Lib\Action\IndexAction.class.php 第 242 行.
+SQL: SELECT * FROM `webim_members` WHERE ( uid = 'test' )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 22 行.
+SQL: UPDATE `webim_histories` SET `send`=1 WHERE ( `to`='test' and send=0 ) [ RunTime:0.001000s ]
+
+[ 2016-06-22T13:23:24+08:00 ] 0.0.0.0 /Webim/Index/buddies?_=1466573004116&ids=test&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002001s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.006000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005000s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+
+[ 2016-06-22T13:23:24+08:00 ] 0.0.0.0 /Webim/Index/buddies?_=1466573004473&ids=test&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.006001s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+
+[ 2016-06-22T13:23:25+08:00 ] 0.0.0.0 /Webim/Index/notifications?_=1466573005736
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.006001s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.007001s ]
+NOTIC: 建议使用I方法替代_param
+
+[ 2016-06-22T13:23:44+08:00 ] 0.0.0.0 /Webim/Index/history?_=1466573024751&type=chat&id=2&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.007001s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='2' AND `from`='test' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='2' AND `to`='test' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.000000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+
+[ 2016-06-22T13:23:48+08:00 ] 0.0.0.0 /Webim/Index/history?_=1466573028791&type=chat&id=1&csrf_token=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\WWW\Webim\ThinkPHP\Common\functions.php 第 566 行.
+SQL: SHOW COLUMNS FROM `webim_rooms` [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of MemberModel::join() should be compatible with that of Model::join() D:\WWW\Webim\Lib\Model\MemberModel.class.php 第 40 行.
+SQL: SHOW COLUMNS FROM `webim_members` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_blocked` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_settings` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `webim_histories` [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `webim_visitors` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `webim_asks` [ RunTime:0.005000s ]
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `webim_histories` WHERE ( `type` = 'chat' AND ((`to`='1' AND `from`='test' AND `fromdel` != 1)
+					 OR (`send` = 1 AND `from`='1' AND `to`='test' AND `todel` != 1)) ) ORDER BY timestamp DESC LIMIT 0,30   [ RunTime:0.001000s ]
+NOTIC: [2] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\WWW\Webim\Lib\Model\HistoryModel.class.php 第 15 行.
+

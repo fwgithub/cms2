@@ -1,0 +1,75 @@
+<?php defined('IN_WZ') or exit('No direct script access allowed'); ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html allowtransparency="true">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lt IE 9]>
+    　　　　<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    　　<![endif]-->
+    <title>建议反馈</title>
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 794px)" href="<?php echo R;?>t2/css/gwkefu.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 794px) and (max-width: 1920px)" href="<?php echo R;?>t2/css/gwstyle.css" />
+    <script type="text/javascript" src="<?php echo R;?>t2/js/jquery.js"></script>
+    <script>
+        $(function() {
+            $('.more_game').hover(function() {
+                $("#game").fadeIn(300);
+            },function(){
+                $("#game").hide();
+            })
+        })
+    </script>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false">
+<div class="web_top">
+    <div class="web_logo">
+        <img src="<?php echo R;?>t2/image/logo.png" >
+        <b>武圣客服专区</b>
+        <div class="logo_right">
+            <a href="" target="_blank">注册</a>
+            <span>|</span>
+            <a href="" target="_blank">充值</a>
+            <span>|</span>
+    <span class="more_game">
+      <p>光环游戏</p>
+      <img src="<?php echo R;?>t2/image/point_down.png">
+          <div id="game" style="display:none;">
+           <div class="game_head">
+            <b>客户端游戏</b>
+           </div>
+           <div class="game_cont">
+           <ul>
+           <li><a href="http://www.iwanws.com/main.html" target="_blank">武圣</a></li>
+           <li><a href="http://dg.iwanws.com" target="_blank">帝国无双</a></li>
+           </ul>
+           </div>
+          </div>
+      </span>
+        </div>
+    </div>
+</div>
+<div class="web_meun">
+    <div class="meun_mid">
+        <a href="index.html" >首页</a>
+        <a href="/" target="_blank">武圣官网</a>
+        <a href="/" target="_blank">用户中心</a>
+        <a href="/" target="_blank">公告</a>
+        <img src="<?php echo R;?>t2/image/biaoyu.png">
+    </div>
+</div>
+<div id="main">
+    <div class="cont_top">
+        <a href="index.html" class="top_on" style="background:url('<?php echo R;?>t2/image/top_li.png') no-repeat right center;">客服专区</a>
+        <a href="bangzhu.html">武圣帮助</a>
+    </div>
+    <div class="all_meun">
+        <a href="index.html" class="all_top">专区首页</a>
+        <a href="index.php?m=member&f=index&v=account_safe" >账号安全</a>
+        <a href="index.php?v=listing&cid=52&page=1"  class="all_on">建议反馈</a>
+        <a href="index.php?v=listing&cid=52&page=1">BUG反馈</a>
+        <a href="index.php?v=listing&cid=52&page=1">问题专区</a>
+        <a href="index.php?v=listing&cid=52&page=1">举报信息</a>
+        <a href="index.php?v=listing&cid=52&page=1" style="border:none;" class="all_btm">在线客服</a>
+    </div>
